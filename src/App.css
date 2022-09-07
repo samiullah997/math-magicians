@@ -4,25 +4,21 @@
   padding: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.4;
-  color: #444;
-  background: #fff;
-  height: 100vh;
-}
-
 .container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .txt-area {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 40%;
   height: 80px;
-  background-color: #444;
+  background-color: #939393;
   color: white;
   padding-inline-end: 10px;
   justify-content: right;
@@ -32,18 +28,17 @@ body {
 
 .input-area {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-  background-color: gray;
+  flex-direction: column;
+  width: 40%;
+  background-color: rgba(169, 167, 167, 0.995);
 }
 
 .input-area .row {
   width: 100%;
-  height: 100px;
+  height: 50px;
   display: flex;
   flex-direction: row;
-  margin: 1px;
+  margin: 0.5px;
 }
 
 .input-area .row div {
