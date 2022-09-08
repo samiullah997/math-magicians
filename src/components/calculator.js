@@ -28,7 +28,7 @@ export default function Calculator() {
       <div className="txt-area">{result || 0}</div>
       <div className="input-area">
         <div className="row">
-          <div onClick={updateObject} role="presentation">Ac</div>
+          <div onClick={updateObject} role="presentation">AC</div>
           <div onClick={updateObject} role="presentation">+/-</div>
           <div onClick={updateObject} role="presentation">%</div>
           <div onClick={updateObject} role="presentation" className="orange">÷</div>
