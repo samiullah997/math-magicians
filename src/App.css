@@ -53,6 +53,13 @@
   font-size: 20px;
   color: black;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.input-area .row div:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
 }
 
 .input-area .row .btn-zero {

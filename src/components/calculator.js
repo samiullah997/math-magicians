@@ -1,47 +1,62 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import calculate from '../logic/calculate';
 
-export default class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+export default function Calculator() {
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+
+  const updateObject = (e) => {
+    const buttonName = e.target.textContent;
+    const myObj = calculate(state, buttonName);
+    setState(myObj);
+  };
+
+  const { total, next, operation } = state;
+  const op = operation === '%' ? '%' : operation;
+  let result = '';
+  if (total) {
+    result = `${total} ${op || ''} ${next || ''}`;
+  } else if (next) {
+    result = `${next} ${op || ''}`;
   }
 
-  render() {
-    return (
-      <div className="container">
-        <div className="txt-area">0</div>
-        <div className="input-area">
-          <div className="row">
-            <div>Ac</div>
-            <div>+/-</div>
-            <div>%</div>
-            <div className="orange">÷</div>
-          </div>
-          <div className="row">
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div className="orange">x</div>
-          </div>
-          <div className="row">
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div className="orange">-</div>
-          </div>
-          <div className="row">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div className="orange">+</div>
-          </div>
-          <div className="row">
-            <div className="btn-zero">0</div>
-            <div>.</div>
-            <div className="orange">=</div>
-          </div>
+  return (
+    <div className="container">
+      <div className="txt-area">{result || 0}</div>
+      <div className="input-area">
+        <div className="row">
+          <div onClick={updateObject} role="presentation">AC</div>
+          <div onClick={updateObject} role="presentation">+/-</div>
+          <div onClick={updateObject} role="presentation">%</div>
+          <div onClick={updateObject} role="presentation" className="orange">÷</div>
+        </div>
+        <div className="row">
+          <div onClick={updateObject} role="presentation">7</div>
+          <div onClick={updateObject} role="presentation">8</div>
+          <div onClick={updateObject} role="presentation">9</div>
+          <div onClick={updateObject} role="presentation" className="orange">x</div>
+        </div>
+        <div className="row">
+          <div onClick={updateObject} role="presentation">4</div>
+          <div onClick={updateObject} role="presentation">5</div>
+          <div onClick={updateObject} role="presentation">6</div>
+          <div onClick={updateObject} role="presentation" className="orange">-</div>
+        </div>
+        <div className="row">
+          <div onClick={updateObject} role="presentation">1</div>
+          <div onClick={updateObject} role="presentation">2</div>
+          <div onClick={updateObject} role="presentation">3</div>
+          <div onClick={updateObject} role="presentation" className="orange">+</div>
+        </div>
+        <div className="row">
+          <div onClick={updateObject} role="presentation" className="btn-zero">0</div>
+          <div onClick={updateObject} role="presentation">.</div>
+          <div onClick={updateObject} role="presentation" className="orange">=</div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
