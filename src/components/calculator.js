@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 import NavBar from './NavBar';
 
-export default function Calculator() {
+export default function calculator() {
   const [state, setState] = useState({
     total: null,
     next: null,
