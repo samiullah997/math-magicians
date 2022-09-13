@@ -4,19 +4,46 @@
   padding: 0;
 }
 
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
-  align-items: center;
+}
+
+.title {
+  width: 100%;
+  height: 100%;
+  padding-inline-start: 30px;
+  margin-top: 30px;
+}
+
+.wrapper {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-top: 100px;
+  padding-inline-end: 30px;
 }
 
 .txt-area {
   display: flex;
   flex-direction: row;
-  width: 40%;
+  width: 100%;
   height: 80px;
   background-color: #939393;
   color: white;
@@ -29,7 +56,7 @@
 .input-area {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 100%;
   background-color: rgba(169, 167, 167, 0.995);
 }
 
