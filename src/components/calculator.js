@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
-import NavBar from './NavBar';
 
 export default function calculator() {
   const [state, setState] = useState({
@@ -26,11 +25,10 @@ export default function calculator() {
 
   return (
     <div className="main-container">
-      <NavBar />
       <div className="container">
         <h3 className="title">Lets Do Some Math!</h3>
         <div className="wrapper">
-          <div className="txt-area">{result || 0}</div>
+          <div className="txt-area" data-testid="txt-area">{result || 0}</div>
           <div className="input-area">
             <div className="row">
               <div onClick={updateObject} role="presentation">AC</div>

@@ -4,6 +4,7 @@ import './App.css';
 import Home from './components/Home';
 import Quote from './components/Quote';
 import Calculator from './components/calculator';
+import NavBar from './components/NavBar';
 
 class App extends Component {
   constructor(props) {
@@ -13,12 +14,15 @@ class App extends Component {
 
   render() {
     return (
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/Calculator" element={<Calculator />} />
-        <Route path="/Quote" element={<Quote />} />
-      </Routes>
+      <div>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Calculator" element={<Calculator />} />
+          <Route path="/Quote" element={<Quote />} />
+        </Routes>
+      </div>
     );
   }
 }
