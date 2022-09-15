@@ -57,6 +57,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - Twitter: [@twitterhandle][(https://twitter.com/twitterhandle)](https://twitter.com/samiullahk997)
 - LinkedIn: [LinkedIn][(https://linkedin.com/in/linkedinhandle)](https://www.linkedin.com/in/samiullah-khan-2702b7171/)
 
+👤 **Peter Boro**
+- GitHub: [@peterboro](https://github.com/peterboro)
+- LinkedIn: [Peter Njuguna](https://www.linkedin.com/in/peter-n-3bb940122/)
+
 ## LIVE DEMO
 [Live Version Demo](https://samiullah997.github.io/math-magicians/)
 
